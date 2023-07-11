@@ -14,8 +14,7 @@ const lastDigit = (str1, str2) => {
   if (str1 === "0") return 0;
 
   const lastDigitStr1 = +str1[str1.length - 1];
-  let remained_b = remained(str2, 4);
-  if (!remained_b) remained_b += 4;
+  let remained_b = remained(str2, 4) || 4;
   return lastDigitStr1 ** remained_b % 10;
 };
 
